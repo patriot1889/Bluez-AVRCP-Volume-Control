@@ -29,7 +29,7 @@ def device_property_changed_cb(property_name, value, path, interface, device_pat
 	vol = properties["Volume"]
 	volume_percentage = format(vol / 1.27, '.2f')
 	logger.info("Detected volume change: {} ({})".format(vol, volume_percentage) )
-	cmd = "sudo amixer cset numid=3 {}%".format(volume_percentage)
+	cmd = "amixer cset numid=3 {}%".format(volume_percentage)
 	logger.info("Running cmd: {}".format(cmd))
 	os.system(cmd)
 
