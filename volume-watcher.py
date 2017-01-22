@@ -41,10 +41,10 @@ if __name__ == "__main__":
 	signal.signal(signal.SIGTERM, shutdown)
 
 	# start logging
-	logger = logging.getLogger("bt_auto_loader")
+	logger = logging.getLogger("volume-watcher")
 	logger.setLevel(LOG_LEVEL)
 	logger.addHandler(logging.handlers.SysLogHandler(address = "/dev/log"))
-	logger.info("Starting to monitor Bluetooth connections")
+	logger.info("Starting to monitor for AVRCP Volume changes")
 
 	# Get the system bus
 	try:
