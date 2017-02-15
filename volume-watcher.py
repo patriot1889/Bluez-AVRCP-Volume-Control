@@ -8,7 +8,7 @@ import logging.handlers
 import dbus
 import dbus.service
 import dbus.mainloop.glib
-import gobject
+from gi.repository import GObject as gobject
 
 LOG_LEVEL = logging.INFO
 #LOG_LEVEL = logging.DEBUG
